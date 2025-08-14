@@ -1,3 +1,5 @@
-# aind-capsule-template
+# SWDB 2025 Data Intro (AllenSDK) 
 
-Basic structure of a capsule to be customized as needed.
+Data and code for SWDB Day 1 Workshop 1. This capsule provides an overview of how to use the AllenSDK to access the Allen Brain Observatory datasets. 
+
+Acknowledgments to contributors: Suyee Lee, Marina Garrett, Saskia de Vries 
