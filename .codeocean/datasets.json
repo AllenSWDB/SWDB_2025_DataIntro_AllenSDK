@@ -6,6 +6,10 @@
 			"mount": "allen-brain-observatory"
 		},
 		{
+			"id": "ca844285-deaa-4440-8e22-5f7644dfbe7a",
+			"mount": "running_behavior"
+		},
+		{
 			"id": "cab43d4e-e1dd-437b-9c37-544f8911c4d9",
 			"mount": "visual-behavior-ophys"
 		},
