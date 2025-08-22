@@ -17,7 +17,6 @@ warnings.filterwarnings("ignore")
 from allensdk.brain_observatory.behavior.behavior_project_cache import VisualBehaviorOphysProjectCache
 
 cache_dir = Path('/root/capsule/data/')
-scratch_dir = Path('/root/capsule/scratch/')
 
 cache = VisualBehaviorOphysProjectCache.from_local_cache(
             cache_dir=cache_dir, use_static_cache=True)
@@ -98,7 +97,7 @@ for k in range(num_sessions):
     
 
 # save the matrices
-path_to_datacache = scratch_dir / 'behavior'
+path_to_datacache = cache_dir / 'running_behavior'
 if not path_to_datacache.is_dir(): 
     path_to_datacache.mkdir(parents=True,exist_ok=True)
     

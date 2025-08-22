@@ -6,12 +6,12 @@ def sliding_window(timestamps, window_size, step_size):
     Generates sliding windows from a sequence with a specified step size.
 
     Args:
-        timestamps (list or str): Timestamps associated with input variable (e.g., list, string).
+        timestamps (numpy.array or list): Timestamps associated with input variable.
         window_size (int): The size of each sliding window.
         step_size (int): The number of elements to advance the window by in each step.
 
     Yields:
-        list or str: A sub-sequence representing the current window.
+        (numpy.array or list): A sub-sequence representing the current window.
     """
     if not isinstance(window_size, int) or window_size <= 0:
         raise ValueError("window_size must be a positive integer.")
@@ -24,20 +24,21 @@ def sliding_window(timestamps, window_size, step_size):
         yield timestamps[i:i + window_size]
         
         
+        
 def apply_sliding_window_average_to_timeseries(input_times,input_variable,window_size_t=60,step_size_t=30,align_time='center'):
     """
     Applies sliding window across timeseries to temporally smooth and downsample data
 
     Args:
-        input_times:
-        input_variable:
-        window_size_t:
-        step_size_t: 
-        align_time:
+        input_times (numpy.array): Timestamps corresponding to variable to smooth
+        input_variable (numpy.array): Variable to smooth using sliding window
+        window_size_t (float): Window size used for smoothing
+        step_size_t (float): New dt for windowed timeseries
+        align_time (str): When to set the time point based on the current time window
 
     Returns:
-        mean_variable:
-        window_times: 
+        mean_variable (numpy.array): Timeseries of the smoothed data
+        window_times (numpy.array): Corresponding timestamps
     """
     dt = input_times[1]-input_times[0]
     
