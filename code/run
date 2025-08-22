@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
 set -ex
 
-# This is the master script for the capsule. When you click "Reproducible Run", the code in this file will execute.
-python -u Workshop-1-Data-Access-AllenSDK-solutions.ipynb "$@"
+# Execute the notebook in place and save outputs inside it
+jupyter nbconvert --to notebook --execute solutions/Workshop-1-Data-Access-AllenSDK-solutions.ipynb --inplace
