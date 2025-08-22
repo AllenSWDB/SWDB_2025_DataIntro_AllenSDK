@@ -1,4 +1,4 @@
-# hash:sha256:b82b77e413cfa8ed58ae2eae593d450a38430f1f366e853f26469da9b4178694
+# hash:sha256:9bc4634465cdddd77dddb1f99d9179ff132cf0a0607e21c368a4f776aa0b4e24
 ARG REGISTRY_HOST
 FROM $REGISTRY_HOST/codeocean/jupyterlab:3.6.1-miniconda4.12.0-python3.9-ubuntu20.04
 
@@ -10,4 +10,4 @@ RUN pip install -U --no-cache-dir \
     allensdk==2.16.2 \
     matplotlib==3.9.0 \
     numpy==1.23.5 \
-    scikit-learn
+    scikit-learn==1.6.1

@@ -22,7 +22,8 @@
 					"version": "1.23.5"
 				},
 				{
-					"name": "scikit-learn"
+					"name": "scikit-learn",
+					"version": "1.6.1"
 				}
 			],
 			"options": {},
