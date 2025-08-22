@@ -17,6 +17,7 @@ warnings.filterwarnings("ignore")
 from allensdk.brain_observatory.behavior.behavior_project_cache import VisualBehaviorOphysProjectCache
 
 cache_dir = Path('/root/capsule/data/')
+results_dir = Path('/root/capsule/results/')
 
 cache = VisualBehaviorOphysProjectCache.from_local_cache(
             cache_dir=cache_dir, use_static_cache=True)
@@ -38,7 +39,7 @@ all_smoothed_run_speeds = []
 all_smoothed_timestamps = []
 
 # Let's get a random sample to explore
-number_of_sessions = 100
+number_of_sessions = 500
 random_sessions = np.random.choice(behavior_session_ids,number_of_sessions,replace=False)
 
 for behavior_session_id in random_sessions:
@@ -97,7 +98,7 @@ for k in range(num_sessions):
     
 
 # save the matrices
-path_to_datacache = cache_dir / 'running_behavior'
+path_to_datacache = results_dir / 'running_behavior'
 if not path_to_datacache.is_dir(): 
     path_to_datacache.mkdir(parents=True,exist_ok=True)
     
