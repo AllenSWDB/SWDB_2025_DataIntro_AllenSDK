@@ -2,10 +2,6 @@
 	"version": 1,
 	"attached_datasets": [
 		{
-			"id": "0396e3a7-454e-4fcd-a2f5-d218cecbb38e",
-			"mount": "swdb_2025_running_behavior"
-		},
-		{
 			"id": "a63a5366-59e9-4ace-9b1d-d3d0b72a264a",
 			"mount": "allen-brain-observatory"
 		},
